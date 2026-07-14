@@ -420,6 +420,12 @@ GarnetNetwork::regStats()
         m_packet_queueing_latency.subname(i, csprintf("vnet-%i", i));
     }
 
+    m_reception_rate.name(name() + ".reception_rate")
+        .flags(statistics::oneline);
+    m_reception_rate =
+        m_packets_received / m_nodes /
+        uint64_t(curCycle() - params().ruby_system->getStartCycle());
+
     m_avg_packet_vnet_latency
         .name(name() + ".average_packet_vnet_latency")
         .flags(statistics::oneline);
