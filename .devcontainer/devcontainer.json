@@ -9,10 +9,9 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "eamodio.gitlens",
+                "anthropic.claude-code",
                 "GitHub.copilot",
                 "GitHub.copilot-chat",
-                "GitHub.vscode-pull-request-github",
                 "ms-python.debugpy",
                 "ms-python.isort",
                 "ms-python.python",
@@ -25,10 +24,7 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers-extra/features/actionlint:1": {},
-        "ghcr.io/devcontainers-extra/features/vscode-cli:1": {}
+        "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
     },
     "onCreateCommand": "./.devcontainer/on-create.sh"
 }
